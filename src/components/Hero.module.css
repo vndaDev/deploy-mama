@@ -1,0 +1,163 @@
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.glowLeft, .glowRight {
+  position: absolute;
+  width: 55vw; height: 55vw;
+  max-width: 600px; max-height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.glowLeft  { background: radial-gradient(circle, rgba(196,131,122,0.2) 0%, transparent 65%); top: 10%; left: -18%; }
+.glowRight { background: radial-gradient(circle, rgba(196,131,122,0.12) 0%, transparent 65%); bottom: 8%; right: -18%; }
+
+.logoWrap {
+  margin-bottom: 2.2rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 12px 40px var(--c-glow));
+}
+
+.logoFloat {
+  will-change: transform;
+}
+
+.eyebrow {
+  color: var(--c-accent-md);
+  margin-bottom: 1rem;
+  position: relative; z-index: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--c-text);
+  letter-spacing: -0.01em;
+  position: relative; z-index: 1;
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--c-accent);
+  display: block;
+}
+
+.subtitle {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--c-text-soft);
+  font-weight: 500;
+  margin: 1.4rem 0 0;
+  position: relative; z-index: 1;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.8vw, 1.65rem);
+  color: var(--c-deep);
+  line-height: 1.65;
+  margin: 1.2rem 0 2.5rem;
+  max-width: 480px;
+  position: relative; z-index: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; z-index: 1;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--c-accent);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.28s, transform 0.2s, box-shadow 0.28s;
+}
+.btnPrimary:hover {
+  background: var(--c-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(196,131,122,0.35);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: var(--c-deep);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  border: 1.5px solid var(--c-line);
+  font-weight: 500;
+  transition: border-color 0.25s, background 0.25s;
+}
+.btnGhost:hover {
+  border-color: var(--c-accent);
+  background: rgba(196,131,122,0.06);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.5rem;
+}
+.scrollLabel {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--c-accent-md);
+  opacity: 0.7;
+  font-weight: 500;
+}
+.scrollLine {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--c-accent-md), transparent);
+}
+
+.rule { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; gap: 1rem; padding: 0 3rem; opacity: 0.3; }
+.ruleLine { flex: 1; height: 1px; background: var(--c-line); }
+.ruleDot  { width: 4px; height: 4px; border-radius: 50%; background: var(--c-accent-md); flex-shrink: 0; }
+
+@media (max-width: 768px) {
+  .hero { padding: 6rem 1.25rem 5rem; }
+  .actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
+  .btnPrimary, .btnGhost { justify-content: center; }
+  .scrollIndicator { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 5rem 1rem 4rem; min-height: 90dvh; }
+  .logoWrap { margin-bottom: 1.5rem; }
+  .logoFloat svg { width: 140px; height: 140px; }
+}

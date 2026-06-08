@@ -1,0 +1,57 @@
+.fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+  display: none;
+}
+
+.fab:hover {
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.55);
+}
+
+.pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: #25D366;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.icon {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .fab {
+    display: flex;
+  }
+}
+
+@media (max-width: 860px) and (pointer: coarse) {
+  .fab {
+    display: flex;
+  }
+}
+
+@media (max-width: 860px) {
+  .fab {
+    display: flex;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 54px;
+    height: 54px;
+  }
+}
