@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Manifiesto from './components/Manifiesto'
@@ -39,6 +40,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         {SECTIONS.map(name => {

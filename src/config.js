@@ -9,14 +9,14 @@ export const SITE = {
   shortName: 'Mírate',
   tagline: 'Porque cada mujer merece volver a reconocerse.',
   description: 'Prótesis mamarias de silicona grado médico personalizadas. Patricia Nava, Estética Paramédica & Oncológica.',
-  url: 'https://mirateotravez.vercel.app',
+  url: 'https://deploy-mama.vercel.app',
   location: 'Caracas, Venezuela',
   year: new Date().getFullYear(),
 }
 
 /* ─── WhatsApp ──────────────────────────────────────── */
 export const WA = {
-  number: '584141337716',
+  number: '584125663003',
   message: '¡Hola! Quisiera agendar una consulta.',
   get url() {
     return `https://wa.me/${this.number}?text=${encodeURIComponent(this.message)}`
