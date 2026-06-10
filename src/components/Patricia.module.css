@@ -1,7 +1,8 @@
 .section {
-  background: linear-gradient(135deg, var(--c-deep) 0%, var(--c-deep-dark) 100%);
+  background: linear-gradient(135deg, #8B5551 0%, var(--c-deep) 40%, var(--c-deep-dark) 100%);
   padding: 6rem 0;
   position: relative; overflow: hidden;
+  scroll-margin-top: 100px;
 }
 
 [data-theme="dark"] .section {
@@ -49,12 +50,12 @@
   color: rgba(255,255,255,0.9);
   text-decoration: none; padding: 1rem 2.2rem;
   font-size: 0.72rem; letter-spacing: 0.22em;
-  text-transform: uppercase; border-radius: 50px;
+  text-transform: uppercase; border-radius: var(--radius-full);
   font-weight: 600;
-  transition: background 0.28s, border-color 0.28s, transform 0.2s;
+  transition: background var(--transition), border-color var(--transition), transform 0.2s, box-shadow var(--transition);
   backdrop-filter: blur(4px);
 }
-.cta:hover { background: rgba(255,255,255,0.2); border-color: rgba(232,196,191,0.7); transform: translateY(-2px); }
+.cta:hover { background: rgba(255,255,255,0.15); border-color: rgba(232,196,191,0.7); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
 
 .watermark { opacity: 0.15; flex-shrink: 0; }
 

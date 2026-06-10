@@ -57,8 +57,8 @@ export default function LogoMark({
       {/* ── 1. Glow / atmosphere ─────────────────────────── */}
       <defs>
         <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%"   stopColor="#E8C4BF" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#E8C4BF" stopOpacity="0" />
+          <stop offset="0%"   stopColor="#D4A49E" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#D4A49E" stopOpacity="0" />
         </radialGradient>
         <filter id="softBlur">
           <feGaussianBlur stdDeviation="1.5" />
@@ -71,7 +71,7 @@ export default function LogoMark({
         data-part="orbit"
         cx="100" cy="100" r="86"
         fill="none"
-        stroke="#8B5551"
+        stroke="#A67775"
         strokeWidth="1.2"
         strokeDasharray={`4 3.5`}
         strokeDashoffset={orbitC - orbitDash}
@@ -84,7 +84,7 @@ export default function LogoMark({
       <circle
         data-part="iris"
         cx="100" cy="100" r="64"
-        fill="#C4837A"
+        fill="#B2656B"
         opacity={progressIris * 0.88}
         style={{ transition: 'opacity 0.1s ease' }}
       />
@@ -92,7 +92,7 @@ export default function LogoMark({
       <circle
         cx="100" cy="100" r="64"
         fill="none"
-        stroke="#8B5551"
+        stroke="#A67775"
         strokeWidth="0.6"
         opacity={progressIris * 0.3}
       />
@@ -101,14 +101,14 @@ export default function LogoMark({
       <circle
         data-part="pupil"
         cx="100" cy="100" r="26"
-        fill="#8B5551"
+        fill="#6B4143"
         opacity={progressPupil}
         style={{ transition: 'opacity 0.1s ease' }}
       />
       <circle
         cx="100" cy="100" r="26"
         fill="none"
-        stroke="#5C3230"
+        stroke="#6B4143"
         strokeWidth="0.5"
         opacity={progressPupil * 0.5}
       />
@@ -124,7 +124,7 @@ export default function LogoMark({
         data-part="eye-upper"
         d="M 14 100 Q 100 32 186 100"
         fill="none"
-        stroke="#5C3230"
+        stroke="#6B4143"
         strokeWidth="1.8"
         strokeLinecap="round"
         strokeDasharray={`${eyeC / 2} ${eyeC}`}
@@ -135,7 +135,7 @@ export default function LogoMark({
         data-part="eye-lower"
         d="M 186 100 Q 100 168 14 100"
         fill="none"
-        stroke="#5C3230"
+        stroke="#6B4143"
         strokeWidth="1.8"
         strokeLinecap="round"
         strokeDasharray={`${eyeC / 2} ${eyeC}`}
@@ -149,7 +149,7 @@ export default function LogoMark({
         data-part="lash-left"
         d="M 34 92 Q 58 76 82 88"
         fill="none"
-        stroke="#8B5551"
+        stroke="#A67775"
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeDasharray={`${lashC / 2} ${lashC}`}
@@ -162,7 +162,7 @@ export default function LogoMark({
         data-part="lash-right"
         d="M 118 88 Q 142 76 166 92"
         fill="none"
-        stroke="#8B5551"
+        stroke="#A67775"
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeDasharray={`${lashC / 2} ${lashC}`}
@@ -176,7 +176,7 @@ export default function LogoMark({
         data-part="seno"
         d="M 30 122 Q 100 166 170 122"
         fill="none"
-        stroke="#8B5551"
+        stroke="#A67775"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeDasharray={`${senoC} ${senoC * 2}`}

@@ -2,13 +2,14 @@
   background: var(--c-bg-2);
   padding: 6rem 0;
   position: relative; overflow: hidden;
+  scroll-margin-top: 100px;
 }
 .section::before {
   content: '';
   position: absolute; top: -120px; right: -120px;
   width: 500px; height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(196,131,122,0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(178,101,107,0.1) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -34,7 +35,7 @@
 .logoGlow {
   position: absolute; width: 320px; height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(196,131,122,0.25) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(178,101,107,0.25) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -43,14 +44,15 @@
 .layer {
   display: flex; align-items: flex-start; gap: 1rem;
   padding: 1.2rem 1rem;
-  border-radius: 6px; cursor: pointer;
-  transition: background 0.2s;
+  border-radius: var(--radius-sm); cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
   border: 1px solid transparent; outline: none;
   min-height: 44px;
 }
 .layer:hover, .layer:focus, .layerActive {
-  background: rgba(245,240,234,0.6);
+  background: rgba(240, 234, 224, 0.6);
   border-color: var(--c-line);
+  box-shadow: var(--shadow-sm);
 }
 [data-theme="dark"] .layer:hover,
 [data-theme="dark"] .layer:focus,

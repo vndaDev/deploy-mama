@@ -1,11 +1,11 @@
-.section { padding: 8rem 0 6rem; position: relative; overflow: hidden; text-align: center; }
+.section { padding: 8rem 0 6rem; position: relative; overflow: hidden; text-align: center; scroll-margin-top: 100px; }
 
 .bgText {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-size: clamp(6rem, 18vw, 18rem);
-  font-weight: 700; color: rgba(196,131,122,0.05);
+  font-weight: 700; color: rgba(178,101,107,0.06);
   white-space: nowrap; pointer-events: none;
   letter-spacing: -0.02em; line-height: 1; user-select: none;
 }
@@ -29,11 +29,11 @@
   background: var(--c-accent); color: white;
   text-decoration: none; padding: 1.1rem 2.5rem;
   font-size: 0.72rem; letter-spacing: 0.22em;
-  text-transform: uppercase; border-radius: 50px;
+  text-transform: uppercase; border-radius: var(--radius-full);
   font-weight: 600;
-  transition: background 0.28s, transform 0.2s, box-shadow 0.28s;
+  transition: background var(--transition), transform 0.2s, box-shadow var(--transition);
 }
-.btnPrimary:hover { background: var(--c-deep); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(196,131,122,0.35); }
+.btnPrimary:hover { background: var(--c-deep); transform: translateY(-2px); box-shadow: var(--shadow-glow); }
 
 @media (max-width: 768px) {
   .section { padding: 5rem 0 4rem; }

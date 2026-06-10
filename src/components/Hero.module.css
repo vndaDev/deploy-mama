@@ -18,8 +18,8 @@
   border-radius: 50%;
   pointer-events: none;
 }
-.glowLeft  { background: radial-gradient(circle, rgba(196,131,122,0.2) 0%, transparent 65%); top: 10%; left: -18%; }
-.glowRight { background: radial-gradient(circle, rgba(196,131,122,0.12) 0%, transparent 65%); bottom: 8%; right: -18%; }
+.glowLeft  { background: radial-gradient(circle, rgba(178,101,107,0.2) 0%, transparent 65%); top: 10%; left: -18%; }
+.glowRight { background: radial-gradient(circle, rgba(178,101,107,0.12) 0%, transparent 65%); bottom: 8%; right: -18%; }
 
 .logoWrap {
   margin-bottom: 2.2rem;
@@ -95,14 +95,14 @@
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  border-radius: 50px;
+  border-radius: var(--radius-full);
   font-weight: 600;
-  transition: background 0.28s, transform 0.2s, box-shadow 0.28s;
+  transition: background var(--transition), transform 0.2s, box-shadow var(--transition);
 }
 .btnPrimary:hover {
   background: var(--c-deep);
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(196,131,122,0.35);
+  box-shadow: var(--shadow-glow);
 }
 
 .btnGhost {
@@ -115,14 +115,14 @@
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  border-radius: 50px;
+  border-radius: var(--radius-full);
   border: 1.5px solid var(--c-line);
   font-weight: 500;
-  transition: border-color 0.25s, background 0.25s;
+  transition: border-color var(--transition), background var(--transition);
 }
 .btnGhost:hover {
   border-color: var(--c-accent);
-  background: rgba(196,131,122,0.06);
+  background: rgba(178, 101, 107, 0.06);
 }
 
 .scrollIndicator {
@@ -143,6 +143,7 @@
 .scrollLine {
   width: 1px; height: 40px;
   background: linear-gradient(to bottom, var(--c-accent-md), transparent);
+  border-radius: 1px;
 }
 
 .rule { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; gap: 1rem; padding: 0 3rem; opacity: 0.3; }
